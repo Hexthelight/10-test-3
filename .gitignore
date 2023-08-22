@@ -1,0 +1,5 @@
+EKS/terraform.tfstate
+EKS/terraform.tfstate.backup
+EKS/Kubernetes/terraform.tfstate
+ECS/terraform.tfstate
+ECS/terraform.tfstate.backup

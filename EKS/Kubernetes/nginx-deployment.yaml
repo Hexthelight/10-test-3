@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: myapp
+spec:
+  selector:
+    matchLabels:
+      app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - name: myapp
+        image: nginx
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "256m"
+        ports:
+        - containerPort: 80
+        volumeMounts:
+          - name: efs
+            mountPath: /usr/share/nginx/html
+      volumes:
+        - name: efs
+          persistentVolumeClaim:
+            claimName: efs-claim
