@@ -1,6 +1,3 @@
----
-Type: ""
----
 # Test 3 - External Volumes and Stateful Applications
 
 ## Synopsis
@@ -275,8 +272,6 @@ cat index.html
 ```
 
 And we should get returned the text that we created using our EC2!
-
-![[Screenshot_20230821_105117.png]]
 
 ## Wrapping Up
 EFS can be a powerful tool to help enable stateful applications within your containerised workloads, and so being able to understand the basics as to how to make this work on ECS and EKS is vital to extending the capabilities of your containers and accessing new ways to manage them going forward.
